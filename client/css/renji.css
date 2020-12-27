@@ -15,7 +15,7 @@ body {
   width: 100%;
   height: auto;
   /* background-color: #73b6da; */
-  background-image: url(/bg.jpg);
+  background-image: url(../bg.jpg);
   background-size: cover;
 
   background-attachment: fixed;
