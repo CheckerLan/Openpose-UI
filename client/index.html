@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>人体姿态识别系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- <link rel="stylesheet" href="css/layui.css" /> -->
+    <link rel="stylesheet" href="css/renji.css" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </head>
+
+  <body>
+    <div id="loading" class="tip">
+      <div>
+        <img src="loading.gif" />
+        <h1>加载中</h1>
+
+      </div>
+    </div>
+    <div id="runing" class="tip">
+      <div>
+        <h1>程序正在运行中</h1>
+        <button id="stopBtn">
+          停止识别
+        </button>
+
+      </div>
+    </div>
+
+    <div class="header " >
+      <h1 >人体姿态识别系统</h1>
+
+    </div >
+    
+    <div  style="position: sticky;top:0;z-index: 10;">
+      <nav class="header" style="color: white;background-color: #0a1947;padding: 10px; z-index: 14;">
+        <div class="margin">
+          识别内容：
+          <select id="content" class="layui-select">
+            <option value ="images">图片</option>
+            <option value ="video">视频</option>
+          </select>
+        </div>
+        |
+        <div class="margin">
+          渲染方式：
+          <select id="mode" class="layui-select">
+            <option value ="cpu">CPU</option>
+            <option value ="gpu">GPU</option>
+          </select>
+        </div>
+        |
+        <div class="margin">
+          渲染精度：
+          <input id="x_value" type="number" name="points" min="0" max="368" step="16" value="-1" />
+          x
+          <input id="y_value" type="number" name="points" min="0" max="368" step="16" value="160" />
+        </div>
+        |
+        <div class="margin">
+          使用模型：
+          <select id="model" class="layui-select">
+            <option value ="BODY_25">BODY_25</option>
+            <option value ="COCO">COCO</option>
+            <option value="MPI">MPI</option>
+          </select>
+        </div>
+        |
+        <div class="margin">
+          <input id="background"  type="checkbox" checked="false"/>
+          <label for="background" >保留背景</label>
+          
+        </div>
+  
+        <div class="margin">
+          <input id="body" type="checkbox" checked="false"/>
+          <label for="body" >渲染身体</label>
+        </div>
+  
+        <div class="margin">
+          <input id="face" type="checkbox"/>
+          <label for="face" >渲染脸</label>
+        </div>
+  
+        <div class="margin">
+          <input id="hand" type="checkbox" />
+          <label for="hand" >渲染手</label>
+        </div>
+  
+        
+        
+      </nav>
+
+      <div class="header" style="color: white;background-color: #051f6d;padding: 20px 0; z-index: 13;">
+        <button id="startBtn" video=false >
+          开始识别
+        </button>
+
+        <button id="cameraBtn" >
+          开启摄像头实时渲染
+        </button>
+
+        <button id="explorerBtn">
+          打开文件保存目录
+        </button>
+      </div>
+
+    </div>
+    
+   
+
+    <div class="totalbox">
+      <div class="floatbox">
+        <div class="box">
+          <h2 id="inh">输入</h2>
+          
+          <div class="littlebox">
+            <input type="file" id="inputfile" class="filebtn"  accept="image/*,video/*" />
+          </div>
+
+          <ul id="listul">
+          </ul>
+
+          <div id="#test">
+            <img src="" class="img-responsive" id="inputimage" />
+            <div id="preview">
+
+            </div>
+            <!-- <video class="videoIn" id="inputvideo" width="100%" height="300" controls> -->
+              <!-- <source id="videoplay" src="" type="video/mp4"> -->
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+              <!-- 您的浏览器不支持 HTML5 video 标签。 -->
+            <!-- </video> -->
+          </div>
+        </div>
+  
+        <div class="box">
+          <h2 id="outh">输出</h2>
+
+          <ul id="listulout">
+          </ul>
+
+          <div>
+            <!-- <label id="result" class="layui-form-label">未识别</label> -->
+            <img id="outputimage" src=""  class="img-responsive"/>
+            <div id="previewout">
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- <div class="cb"></div> -->
+
+      </div>  
+    </div>
+      
+  </body>
+</html>
+ 
