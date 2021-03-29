@@ -10,9 +10,9 @@
 >
 > 该项目运行需要Openpose的模型支持与相应的dll库文件；
 >
-> 训练模型可以通过`openpose_UI\models\`目录下的`getModels.bat`或`getModels.sh`进行获取(此方法下载极慢)，或者通过https://www.aiuai.cn/aifarm708.html该博客中的下载地址下载；
+> 训练模型可以通过`openpose_UI\models\`目录下的`getModels.bat`或`getModels.sh`进行获取(此方法下载极慢)，或者通过 https://www.aiuai.cn/aifarm708.html 该博客中的下载地址下载；
 >
-> dll库文件由于gitee的限制上传数量和大小，dll文件未上传，后面将尝试上传，如果需要可以尝试下载openpose官方网站中的发布的windows版本，将其中的dll复制进`openpose_UI\bin\`目录下即可；
+> dll库文件由于文件过大，并没有上传至仓库，我将其压缩发到和彩云网盘，供大家下载 链接: https://caiyun.139.com/m/i?105Cq6zrUjzEy  提取码:AkpZ，此外还可下载openpose官方网站中的发布的windows版本，将其中的dll复制进`openpose_UI\bin\`目录下即可；
 >
 > 
 
