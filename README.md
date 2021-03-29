@@ -1,5 +1,21 @@
 # Openpose UI
 
+> openpose项目地址: https://github.com/CMU-Perceptual-Computing-Lab/openpose
+>
+> 项目运行环境：
+>
+> ​	 Service端：windows系统（本人是win10），cuda，cudnn，gpu算力5.0（因为个人技术原因，在编译时锁定成了该算力，如果有需求或有能力，可自行重新编译openpose的版本或将bin目录的openpose置换为openpose官方版本/个人可运行版本）；
+>
+> ​	 Client端：谷歌浏览器；
+>
+> 该项目运行需要Openpose的模型支持与相应的dll库文件；
+>
+> 训练模型可以通过`openpose_UI\models\`目录下的`getModels.bat`或`getModels.sh`进行获取(此方法下载极慢)，或者通过https://www.aiuai.cn/aifarm708.html该博客中的下载地址下载；
+>
+> dll库文件由于gitee的限制上传数量和大小，dll文件未上传，后面将尝试上传，如果需要可以尝试下载openpose官方网站中的发布的windows版本，将其中的dll复制进`openpose_UI\bin\`目录下即可；
+>
+> 
+
 ## 目录
 
 [toc]
